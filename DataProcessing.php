@@ -32,10 +32,7 @@ class DataProcessing
     static function isName($name)
     {
         $name = str_replace(" ", "", $name);
-        if(!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$/", $name)){
-            return false;
-        }
-        return true;
+        return preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$/", $name);
     }
 
     /**
