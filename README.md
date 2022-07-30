@@ -2,6 +2,10 @@
 
 Classe com vários validadores de dados em PHP
 
+```shell
+composer require marrios/validators
+```
+
 Ex:
 ```php
   use DV\DataValidator as Data;
