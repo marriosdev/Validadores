@@ -16,12 +16,6 @@ Retorno: true
 // Validador de NOME
 Data::IsName(String);
 
-// Validador de TELEFONE
-Data::isTelephone(String);
-
-// Validador de SENHA
-Data::validPassword(String);
-
 // Validador de CNPJ
 Data::isCnpj(String);
 
