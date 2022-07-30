@@ -4,7 +4,7 @@ Classe com vários validadores de dados em PHP
 
 Ex:
 ```php
-  use DataProcessing as DP;
+  use DV\DataValidator as Data;
   
   return DP::isCnpj('06.990.590/0001-23');
 ```
@@ -14,24 +14,24 @@ Retorno: true
 ## Lista
 ```php
 // Validador de NOME
-DataProcessing::IsName(String);
+Data::IsName(String);
 
 // Validador de TELEFONE
-DataProcessing::isTelephone(String);
+Data::isTelephone(String);
 
 // Validador de SENHA
-DataProcessing::validPassword(String);
+Data::validPassword(String);
 
 // Validador de CNPJ
-DataProcessing::isCnpj(String);
+Data::isCnpj(String);
 
 // Validador de CPF
-DataProcessing::isCpf(String);
+Data::isCpf(String);
 
 // Retorna o CNPJ formatado com pontuação
-DataProcessing::cnpjWithScore(String);
+Data::cnpjWithScore(String);
 
 // Retorna o CPF formatado com pontuação
-DataProcessing::cpfWithScore(String);
+Data::cpfWithScore(String);
 ```
 

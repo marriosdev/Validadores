@@ -1,0 +1,26 @@
+{
+    "name": "marrios/validators",
+    "description": "A simple data validator",
+    "keywords": ["Data Validator", "Validators"],
+    "license": "GPL-3.0",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "DV\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marrios Dev",
+            "email": "edmariooliver@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

@@ -1,10 +1,14 @@
 <?php
 
+
 /*-----------------------------------------------------------\
-| Class : DataProcessing                                     |
+| Class : DataValidator                                     |
 | Used for data processing, such as cleaning and validation  |
 \-----------------------------------------------------------*/
-class DataProcessing
+
+namespace DV;
+
+class DataValidator
 {
     /**
      * Sanitaze data
@@ -32,47 +36,7 @@ class DataProcessing
     static function isName($name)
     {
         $name = str_replace(" ", "", $name);
-        return preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$/", $name);
-    }
-
-    /**
-     * Returns true if it's an telephone number válid, or false if an not válid
-     *
-     * @param string $number
-     * @return bool
-     */
-    static function isTelephone($number)
-    {
-        $number = str_replace("(", "", $number);
-        $number = str_replace(")", "", $number);
-        $number = str_replace(" ", "", $number);
-        $number = str_replace("-", "", $number);
-
-        if(strlen($number) >= 12 or strlen($number) <= 9){
-            return false;
-        }
-        if(preg_match("/^[A-Za-záàâãéèêíïóôõö'úçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]/",$number)){
-            return false;
-        }
-        if(preg_match("/^[@#$%¨&*()!-+=;.,|]/",$number)){
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * Returns true if it's an password valid
-     *
-     * @param string $password
-     * @return bool
-     */
-    static function validPassword($password)
-    {
-        $password = str_replace(" ", "", $password);
-        if(strlen($password) <= 7){
-            return false;
-        }
-        return true;
+        return (preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$/", $name)? true : false);
     }
 
      /**
