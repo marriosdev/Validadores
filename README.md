@@ -13,5 +13,10 @@ Retorno: true
 ## Lista
 ```php
 DataProcessing::IsName(String);
+DataProcessing::isTelephone(String);
+DataProcessing::validPassword(String);
+DataProcessing::isCnpj(String);
+DataProcessing::isCpf(String);
+DataProcessing::cnpjWithScore(String);
 ```
 
