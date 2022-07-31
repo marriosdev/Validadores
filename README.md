@@ -1,3 +1,9 @@
+<p align="center">
+    <a href="https://packagist.org/packages/marrios/validadores"><img src="https://img.shields.io/packagist/dt/marrios/validadores" alt="Total Downloads"</a>
+    <a href="https://packagist.org/packages/marrios/validadores"><img src="https://img.shields.io/packagist/v/marrios/validadores" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/marrios/validadores"><img src="https://img.shields.io/packagist/l/marrios/validadores" alt="License"></a>
+</p>
+
 # Validadores
 
 Classe com vários validadores de dados em PHP
