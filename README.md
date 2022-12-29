@@ -16,7 +16,7 @@ Ex:
 ```php
   use DV\DataValidator as Data;
   
-  return DP::isCnpj('06.990.590/0001-23');
+  return Data::isCnpj('06.990.590/0001-23');
 ```
 Retorno: true
 
