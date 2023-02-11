@@ -101,4 +101,51 @@ class DataValidatorTest extends TestCase
     {
         $this->assertTrue(Data::isName("João da Silva"));
     }
+
+    /**
+     * CEP TESTS
+     */
+    
+    public function testShouldReturnFalseWhenCepIsEmpty() 
+    {
+        $this->assertFalse(Data::isCep(""));
+    }
+
+    public function testShouldReturnFalseWhenCepIsNull() 
+    {
+        $this->assertFalse(Data::isCep(null));
+    }
+
+    public function testShouldReturnFalseWhenCepIsNumber() 
+    {
+        $this->assertFalse(Data::isCep("123"));
+    }
+
+    public function testShouldReturnTrueWhenCepIsValid() 
+    {
+        $this->assertTrue(Data::isCep("12345-678"));
+    }
+
+    /**
+     * RG TESTS
+    */
+    public function testShouldReturnFalseWhenRgIsEmpty() 
+    {
+        $this->assertFalse(Data::isRg(""));
+    }
+
+    public function testShouldReturnFalseWhenRgIsNull() 
+    {
+        $this->assertFalse(Data::isRg(null));
+    }
+
+    public function testShouldReturnFalseWhenRgIsNumber() 
+    {
+        $this->assertFalse(Data::isRg("123"));
+    }
+
+    public function testShouldReturnTrueWhenRgIsValid() 
+    {
+        $this->assertTrue(Data::isRg("31.538.734-8"));
+    }
 }

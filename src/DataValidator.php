@@ -85,9 +85,8 @@ class DataValidator
 
         if($cnpj[12] == $firstDigit && $cnpj[13] == $secondDigit){
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
 
     /**
@@ -110,23 +109,43 @@ class DataValidator
         if(strlen($cpf) != 11 or !preg_match("/^[0-9]+$/", $cpf)){
             return false;
         }
+
         //Second verification
         for($i=0; $i<9; $i++){
             $value += ($i+1) * intval($cpf[$i]);
         }
+        
         $verificatorFirstNumber = $value % 11;
         $value = 0;
+
         for($i=0; $i<10; $i++){
             $value += intval($cpf[$i]) * $i;
         }
+
         $verificatorSecondNumber = $value % 11;
         if($cpf[9] != $verificatorFirstNumber or $cpf[10] != $verificatorSecondNumber){
             return false;
         }
-        else{
-            return true;
-        }
+
+        return true;
     }
+
+    static function isCep($cep)
+    {
+        if (preg_match('/^[0-9]{5}-[0-9]{3}$/', trim($cep))) {
+            return true;
+        } 
+        return false;
+    }
+
+    static function isRg($rg)
+    {   
+        if (preg_match('/^[0-9]{2}.[0-9]{3}.[0-9]{3}.[0-9]{1}$/', trim($rg))) {
+            return true;
+        } 
+        return false;
+    }
+
 
     /**
      *

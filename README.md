@@ -37,5 +37,8 @@ Data::cnpjWithScore(String);
 
 // Retorna o CPF formatado com pontuação
 Data::cpfWithScore(String);
+
+// Validador de CEP
+Data::isCep(String);
 ```
 
